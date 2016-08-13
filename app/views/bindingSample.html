@@ -1,0 +1,27 @@
+<div class="jumbotron">
+    <p class="lead">
+        AngularJS + RequireJS: Task 7 and 8
+    </p>
+</div>
+<hr>
+
+<div class="main-content">
+  <h4>Task 7:</h4>
+  <p>Create 3 number inputs that sum up into an additional field. Editing each of the 3 inputs will always update the sum value. The fourth field can also be editable, and whenever user changes this one its value must be spread across the other 3 fields. Example:
+  Initial values:
+  #1 = 100 #2 = 100 #3 = 100 #4 = 300
+  User interacts with field #1:
+  #1 = 200 #2 = 100 #3 = 100 #4 = 400
+  User interacts with field #4 after editing #1:
+  #1 = 150 #2 = 75 #3 = 75 #4 = 300
+  </p>
+  <label>Input1: <input type="text" ng-model="field1"></label><br>
+  <label>Input2: <input type="text" ng-model="field2"></label><br>
+  <label>Input3: <input type="text" ng-model="field3"></label><br>
+  <label>Total: <input type="text" ng-change="editTotal()" ng-model="total"></label><br>
+  <h4>Task 8:</h4>
+  <p>Create 3 inputs each with maximum char. length 5. When entering the 5th char. in an input the cursor should jump to the next input right after the char. has been inserted. When deleting the 1st char. of an input the cursor should jump at the end of previous input right after that char. has been deleted.</p>
+  <div id="tabInputDiv" ng-repeat="tabInputItem in tabInputs">
+    <label>Input{{$index+1}}: <input type="text" restrict-max-char="5" id="tabInputField_{{$index}}" ng-keyup="tabInputKeyup($event)"></label><br>
+  </div>
+</div>

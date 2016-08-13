@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <p class="lead">
+        AngularJS + RequireJS: Task 2, 5 and 6
+    </p>
+</div>
+<hr>
+
+<div class="main-content">
+  <h4>Task 2:</h4>
+  <p>Provide example on how to pass data between page controllers. Have an input field in one page of which contents is displayed in the second page. Please do not use $rootScope.</p>
+  <label>Some text entered in home page is {{someTextUpdated}}</label><br>
+
+
+  <h4>Task 5:</h4>
+  Have a directive that is dependent of ngModel, that restricts the input to numbers only and auto formats the input as a phone number like (541) 754-3010. The field must change its format as user types. Do not create a $filter for this directive as that does not mean the directive itself is doing the format.
+  <label>Input telephone: <input type="text" ng-model="telephone1" telephone-link></label><br>
+
+  <h4>Task 6:</h4>
+  Have a directive that is dependent of ngModel, that restricts the input to numbers only and auto formats the input into currency, ex: $1,234. The field must change its format as user types. Do not create a $filter for this directive as that does not mean the directive itself is doing the format.
+  <label>Input currency: <input type="text" ng-model="currency1" currency-link></label><br>
+
+</div>

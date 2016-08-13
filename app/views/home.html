@@ -1,0 +1,35 @@
+<div class="jumbotron">
+    <p class="lead">
+        AngularJS + RequireJS: Task 2 and 4
+    </p>
+</div>
+
+<div class="main-content">
+    <h4>Task 2:</h4>
+    <p>Provide example on how to pass data between page controllers. Have an input field in one page of which contents is displayed in the second page. Please do not use $rootScope.</p>
+    <label>Enter Some text<input type="text" ng-change="someTextUpdated($event)" ng-model="someText"/></label><br>
+    <h4>Task 4:</h4>
+    <p>Create an array of 50 items, each item having 3 properties. Create an option to sort the array by one or two properties. Make the array be filterable by a search input.</p>
+    <div class="employeeDiv">
+        <label>Search employee: <input type="text" ng-model="searchEmployee"></label><br>
+        <button type="button" ng-click="sortEmployee(e,'name')">Sort by Name</button><span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+        <button type="button" ng-click="sortEmployee(e,'age')">Sort by Age</button><span class="sortorder" ng-show="propertyName === 'age'" ng-class="{reverse: reverse}"></span><br>
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Id</th>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="employee in employees | filter:searchEmployee | orderBy:propertyName:reverse">
+          <td>{{employee.id}}</td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.age}}</td>
+        </tr>
+      </table>
+    </div>
+
+</div>
+
+<hr>

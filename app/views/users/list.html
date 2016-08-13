@@ -1,0 +1,9 @@
+<h1>This is a List of All Users</h1>
+
+<h5 state-name="State Name:"></h5>
+<ul>
+    <li ng-repeat="person in users">
+        <a ng-href="#/users/{{person.id}}">{{person.name}}</a>
+    </li>
+</ul>
+<div ui-view="main"></div>
